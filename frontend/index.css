@@ -1,0 +1,27 @@
+body { 
+    background-color: rgb(179, 215, 255);
+    width: 400px; 
+    padding: 12px 20px;
+    margin:auto;
+    
+}
+
+.titleWrapper {
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 1px;
+    border: 1px solid darkgray;
+}
+
+input {
+    width: 400px;
+    padding: 10px;
+    margin: 20px 0;
+    box-sizing: border-box;
+}
+
+button {
+    padding-bottom: 10px;
+    padding-top: 10px;
+    width: 400px;
+}
