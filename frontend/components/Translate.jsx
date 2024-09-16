@@ -28,12 +28,10 @@ const Translate = () => {
         <button onClick={handleTranslate}>
             Översätt
         </button>
-        {translatedText && (
-            <input type="text"
-                   value={translatedText}
-                   readOnly          
-            />
-        )}
+        <input type="text"
+            value={translatedText}
+            readOnly          
+        />
     </>
   )
 }
