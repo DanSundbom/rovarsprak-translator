@@ -3,7 +3,6 @@ body {
     width: 400px; 
     padding: 12px 20px;
     margin:auto;
-    
 }
 
 .titleWrapper {
@@ -24,4 +23,11 @@ button {
     padding-bottom: 10px;
     padding-top: 10px;
     width: 400px;
+}
+
+textarea {
+    width: 392px;
+    resize: none;
+    overflow: hidden;
+    margin: 20px 0;
 }
