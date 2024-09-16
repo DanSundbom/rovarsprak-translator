@@ -1,9 +1,22 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect, useRef} from 'react'
 
 const Translate = () => {
 
     const [inputText, setInputText] = useState('');
     const [translatedText, setTranslatedText] = useState('');
+    const textareaRef = useRef(null);
+    const translateDescriptor = "Översättning:"
+
+    const adjustTextareaHeight = () => {
+        if (textareaRef.current) {
+          textareaRef.current.style.height = 'auto';
+          textareaRef.current.style.height = textareaRef.current.scrollHeight + 'px';
+        }
+    };
+
+    useEffect(() => {
+        adjustTextareaHeight();
+      }, [translatedText]);
 
     const handleTranslate = async () => {
         const response = await fetch('http://localhost:4000/translate', {
@@ -28,8 +41,10 @@ const Translate = () => {
         <button onClick={handleTranslate}>
             Översätt
         </button>
-        <input type="text"
-            value={translatedText}
+        <textarea
+            ref={textareaRef}
+            value={`${translateDescriptor}\n${translatedText}`}
+            rows={1}
             readOnly          
         />
     </>
