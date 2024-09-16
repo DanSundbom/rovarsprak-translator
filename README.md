@@ -1,4 +1,4 @@
-1. Open terminal an enter "npm install -g nodemon".
+1. Open terminal and enter "npm install -g nodemon".
 2. In main directory run "npm install".
 3. Go into /backend folder with "cd backend".
 4. Enter "npm install".
